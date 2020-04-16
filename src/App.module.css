@@ -1,5 +1,6 @@
 body {
     background-color: rgb(250, 250, 250);
+    /* background-color: rgb(31,30,46); */
 }
 
 .container {
@@ -12,6 +13,11 @@ body {
 .image {
     width: 370px;
     margin-top: 50px;
+}
+
+.footer {
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 /* this is for tablet and mobile device */

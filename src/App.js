@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Cards, Chart, CountryPicker } from './components';
 
+import { Typography } from '@material-ui/core';
+
 import styles from './App.module.css';
 
 import coronaImage from './images/corona.png';
@@ -42,6 +44,14 @@ class App extends React.Component {
           <Cards data={data} />
           <CountryPicker handleCountryChange={this.handleCountryChange} />
           <Chart data={data} country={country} />
+
+          {/* <hr /> */}
+
+          <div className={styles.footer}>
+            <Typography color="textSecondary" variant="caption">
+              <footer>Minh Tran &copy; 2020</footer>
+            </Typography>
+          </div>
         </div>
     )
   }
