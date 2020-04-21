@@ -39,8 +39,10 @@ class App extends React.Component {
     const { data, country } = this.state;
 
     return (
+      <div>
+        <Header />
         <div className={styles.container}>
-          <Header />
+          
           <img src={coronaImage} className={styles.image} alt="COVID-19" />
           <Cards data={data} />
           <CountryPicker handleCountryChange={this.handleCountryChange} />
@@ -54,6 +56,7 @@ class App extends React.Component {
             </Typography>
           </div>
         </div>
+      </div>
     )
   }
 }
