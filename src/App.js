@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cards, Chart, CountryPicker } from './components';
+import { Cards, Chart, CountryPicker, Header } from './components';
 
 import { Typography } from '@material-ui/core';
 
@@ -40,6 +40,7 @@ class App extends React.Component {
 
     return (
         <div className={styles.container}>
+          <Header />
           <img src={coronaImage} className={styles.image} alt="COVID-19" />
           <Cards data={data} />
           <CountryPicker handleCountryChange={this.handleCountryChange} />
