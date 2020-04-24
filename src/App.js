@@ -15,6 +15,7 @@ class App extends React.Component {
   state = {
     data: {},
     country: '',
+    themeMode: 'light'
   }
 
   async componentDidMount() {
@@ -36,27 +37,25 @@ class App extends React.Component {
 
   render() {
 
-    const { data, country } = this.state;
-
-    const [themeMode, setThemeMode] = React.useState('light');
+    const { data, country, themeMode } = this.state;    
 
     const theme = createMuiTheme({
       palette: {
         type: themeMode,
         primary: {
-          main: themeMode === 'light' ? '#3f51b5' : '#111'
+          main: themeMode === 'light' ? '#3f51b5' : '#388e3c'
         }
       }
     })
 
     const handleLightMode = () => {
       document.querySelector('body').style.backgroundColor = '#fff';
-      setThemeMode('light');
+      this.setState({ themeMode: 'light' });
     }
 
     const handleDarkMode = () => {
-      document.querySelector('body').style.backgroundColor = '#111';
-      setThemeMode('dark');
+      document.querySelector('body').style.backgroundColor = '#2e2e2e';
+      this.setState({ themeMode: 'dark' });
     }
 
     return (

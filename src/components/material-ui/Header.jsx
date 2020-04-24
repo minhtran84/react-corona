@@ -14,20 +14,26 @@ const useStyles = makeStyles(() => ({
 const Header = ({ themeMode, lightMode, darkMode }) => {
     const classes = useStyles();
     return (
-        <AppBar position="static">
+        <AppBar position="static" color='primary'>
             <Toolbar>
                 <Typography className={classes.headerTypography}>
                     COVID-19 Tracker APP
                 </Typography>
                 {/* <TrackChangesIcon /> */}
                 { themeMode === 'light' ? (
-                    <IconButton color="inherit" onClick={darkMode}>
-                        <Brightness2Icon />
-                    </IconButton>
+                    <React.Fragment>
+                        <Typography>Light theme</Typography>
+                        <IconButton color="inherit" onClick={darkMode}>
+                            <Brightness2Icon />
+                        </IconButton>
+                    </React.Fragment>
                 ) : (
-                    <IconButton color="inherit" onClick={lightMode}>
-                        <Brightness7Icon />
-                    </IconButton>
+                    <React.Fragment>
+                        <Typography>Dark theme</Typography>
+                        <IconButton color="inherit" onClick={lightMode}>
+                            <Brightness7Icon />
+                        </IconButton>
+                    </React.Fragment>
                 )}                
             </Toolbar>
         </AppBar>
